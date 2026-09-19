@@ -1,0 +1,180 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Japan · 2027</title>
+<style>
+:root{--bg:#fcfcf5;--card:#e8f4f7;--card2:#d9edf2;--accent:#4993c5;--text:#294653;--muted:#71858d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",Arial,sans-serif}
+.header{position:sticky;top:0;z-index:20;background:rgba(252,252,245,.96);backdrop-filter:blur(14px);border-bottom:1px solid #e4edef}.header-in{max-width:760px;margin:auto;height:62px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:15px;font-weight:900;white-space:nowrap}.nav{display:flex;gap:14px;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{font-size:12px;font-weight:800;color:#5d747d;text-decoration:none;white-space:nowrap}
+main{max-width:760px;margin:auto;padding:0 15px 45px}.hero{height:245px;margin:0 -15px 34px;background:linear-gradient(135deg,#214b5b,#5e9ab0 52%,#e7f3f5);border-radius:0 0 30px 30px;display:flex;align-items:flex-end;padding:24px 20px;color:#fff}.hero h1{margin:0;font-size:30px;font-weight:900}.hero p{margin:7px 0 0;font-size:12px}.hero .dates{margin-top:12px;font-size:13px;font-weight:800;opacity:.95}
+.section{scroll-margin-top:82px;margin-top:46px}.section:first-of-type{margin-top:8px}.label{margin:0 0 14px 3px;font-size:15px;font-weight:900;color:#337eae}
+.flight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flight{background:#fff;border:1px solid #e0eaed;border-radius:20px;padding:15px 16px;box-shadow:0 8px 22px rgba(51,92,104,.06)}.flight .k{font-size:11px;color:#7d9098;font-weight:800}.flight .route{font-size:17px;font-weight:900;margin:5px 0 3px}.flight .info{font-size:12px;color:#637981;line-height:1.55}
+.link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.quick{display:block;background:#fff;border:1px solid #dce8eb;border-radius:18px;padding:14px;color:#337eae;text-decoration:none;font-size:12px;font-weight:900;box-shadow:0 7px 18px rgba(51,92,104,.05)}.quick span{display:block;color:#7b8e95;font-size:10px;font-weight:700;margin-top:5px}
+.daytabs{display:flex;gap:7px;overflow:auto;margin:14px 0 0;padding:2px 1px 5px;scrollbar-width:none}.daytabs::-webkit-scrollbar{display:none}.daytab{border:1px solid #dbe8eb;background:#fff;color:#789099;border-radius:999px;font-size:11px;font-weight:850;padding:8px 12px;white-space:nowrap;box-shadow:0 3px 10px rgba(51,92,104,.05)}.daytab.active{color:#fff;background:#337eae;border-color:#337eae;box-shadow:0 6px 15px rgba(51,126,174,.2)}#day{margin-top:10px}
+.day-card{background:var(--card);border:1px solid #cfe5eb;border-radius:27px;padding:21px 18px 23px;box-shadow:0 12px 30px #5a9eb51c}.meta{font-size:11px;font-weight:900;color:#5b8999;letter-spacing:.5px}.date{font-size:27px;font-weight:900;line-height:1.15;margin-top:4px}.week{font-size:12px;color:#68818a;margin-top:3px}.title{font-size:20px;font-weight:900;line-height:1.35;margin-top:16px}.events{margin-top:19px}.event{padding:12px 0;border-top:1px solid #fff9}.event:first-child{border-top:0;padding-top:0}.item{font-size:14px;line-height:1.6;margin:5px 0}.item a{color:#337eae;text-decoration:none;font-weight:850;border-bottom:1px solid #8abdd266}.sub{font-size:12px;color:#647b83;margin:3px 0 3px 17px}.note{background:#ffffff99;border:1px solid #ffffff;border-radius:14px;padding:10px 12px;font-size:12px;line-height:1.55;margin-top:9px}
+.hotel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.hotel{background:#fff;border:1px solid #dce8eb;border-radius:22px;padding:16px;box-shadow:0 10px 28px rgba(51,92,104,.08)}.hotel .stay{font-size:10px;color:#78909a;font-weight:800}.hotel h3{margin:6px 0 5px;font-size:17px;line-height:1.3;color:#2f789f}.hotel .city{font-size:12px;color:#667e86;line-height:1.5}.hotel-links{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.hotel-links a{display:inline-flex;padding:7px 9px;border-radius:999px;background:#eef6f8;color:#337eae;text-decoration:none;font-size:10px;font-weight:850}
+.budget{background:#fff;border:1px solid #e1ebee;border-radius:20px;padding:10px 16px}.budget-row{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid #edf2f3;font-size:13px}.budget-row:last-child{border-bottom:0}.budget-row b{white-space:nowrap}.budget .muted{color:#8a9ba1;font-weight:600}.budget .total{font-size:15px;color:#2f789f}
+.todo{display:grid;grid-template-columns:1fr 1fr;gap:10px}.todo-item{display:flex;align-items:center;gap:10px;background:var(--card2);border:0;border-radius:14px;padding:12px 14px;font-size:13px;cursor:pointer}.todo-item input{width:18px;height:18px;accent-color:#337eae;flex:0 0 auto}.todo-item:has(input:checked){opacity:.62;text-decoration:line-through}
+footer{text-align:center;color:#9aa8ad;font-size:10px;padding:28px 0 8px}@media(max-width:720px){.flight-grid,.link-grid{grid-template-columns:1fr}.todo{grid-template-columns:1fr}}@media(max-width:520px){.header-in{padding:0 13px}.brand{font-size:14px}.nav{gap:10px}.nav a{font-size:11px}main{padding-left:13px;padding-right:13px}.hero{height:220px;margin-left:-13px;margin-right:-13px}.hotel-grid{grid-template-columns:1fr}.day-card{padding:19px 16px 21px}.date{font-size:25px}.title{font-size:18px}}
+</style></head><body>
+<header class="header"><div class="header-in"><div class="brand">Japan · 2027</div><nav class="nav"><a href="#flights">航班</a><a href="#links">链接</a><a href="#itinerary">行程</a><a href="#hotels">酒店</a><a href="#budget">预算</a><a href="#todo">Todo</a></nav></div></header>
+<main>
+<section class="hero"><div><h1>Japan · 2027</h1><p>Tokyo · Morioka · Aomori · Tohoku</p><div class="dates">2027.2.1 — 2.8 · 8天7晚</div></div></section>
+<section class="section" id="flights"><div class="label">✈️ 航班</div><div class="flight-grid">
+<div class="flight"><div class="k">2.1 · 周一 · 去程</div><div class="route">深圳 → 东京</div><div class="info">17:25–22:20 · 3时55分<br>ANA NH966 · 经济舱 · 有餐食<br>波音 787（大） · SZX 宝安机场 → HND 羽田机场</div></div>
+<div class="flight"><div class="k">2.8 · 周一 · 返程</div><div class="route">东京 → 深圳</div><div class="info">11:00–15:20 · 5时20分<br>ANA NH965 · 经济舱<br>波音 787（大） · HND 羽田机场 → SZX 宝安机场</div></div>
+</div></section>
+<section class="section" id="links"><div class="label">🔗 旅行常用链接</div><div class="link-grid">
+<a class="quick" href="https://www.eki-net.com/zh-CHS/jreast-train-reservation/reserve/wb/UseTicketSelect/Index" target="_blank">🎫 东日本票 & 新干线指定席<span>JR-EAST Train Reservation</span></a>
+<a class="quick" href="http://xhslink.com/o/2wuYXyeWF60" target="_blank">🛍️ 逛街女装总览<span>小红书攻略</span></a>
+<a class="quick" href="https://taenoyu.com/en/" target="_blank">♨️ 妙乃汤预约<span>Taenoyu 官方网站</span></a>
+</div></section>
+<section class="section" id="itinerary"><div class="label">🗓️ 行程</div><div class="daytabs" id="daytabs"></div><div id="day"></div></section>
+<section class="section" id="hotels"><div class="label">🏨 酒店</div><div class="hotel-grid" id="hotelList"></div></section>
+<section class="section" id="budget"><div class="label">💰 开销</div><div class="budget" id="budgetList"></div></section>
+<section class="section" id="todo"><div class="label">☑️ Todo</div><div class="todo">
+<label class="todo-item"><input type="checkbox"><span>确认东日本票 / 新干线指定席</span></label>
+<label class="todo-item"><input type="checkbox"><span>预约妙乃汤</span></label>
+<label class="todo-item"><input type="checkbox"><span>确认迪士尼门票</span></label>
+<label class="todo-item"><input type="checkbox"><span>确认富士急乐园安排</span></label>
+<label class="todo-item"><input type="checkbox"><span>准备日元现金</span></label>
+<label class="todo-item"><input type="checkbox"><span>确认八甲田 / 十和田湖方案</span></label>
+</div></section>
+<footer>JAPAN · 2027.2.1 — 2.8</footer></main>
+<script>
+const D=[
+["2.1","周一","🛬 抵达东京",[
+"15:30｜出门",
+"17:25｜✈️ 深圳 → 东京；ANA NH966",
+"22:20｜🛬 抵达羽田机场",
+"抵达后｜🚇 羽田机场 → 滨松町，约25分钟",
+"入住｜🏨 Henn na Hotel Hamamatsucho"
+]],
+["2.2","周二","🎠 东京迪士尼",[
+"上午｜🎠 酒店 → 迪士尼，约45分钟",
+"全天｜🎠 东京迪士尼",
+"攻略｜🚂 小火车纪念票|http://xhslink.com/o/53RwFns1Ifw",
+"晚上｜🍖 回滨松町附近吃晚饭；烤肉|http://xhslink.com/o/acZ8Tu09Ho",
+"准备｜🎫 取5日 JR 票|https://xhslink.cn/o/8cdPw80vmBi"
+]],
+["2.3","周三","🗼 东京塔 · 秋叶原 · 银座 → 盛冈",[
+"09:20｜出门",
+"上午｜🚶 到东京塔",
+"🗼 东京塔二楼攻略|http://xhslink.com/o/3gTw6BUSqwY",
+"🐟 鲷鱼烧|http://xhslink.com/o/NqUZoIzcps",
+"🚇 滨松町 → 秋叶原 JR 站，约10分钟直达",
+"✡️ 秋叶原｜🎁 冰箱贴|http://xhslink.com/o/5bDwpDF7hUt",
+"秋叶原｜🍰 泡芙|http://xhslink.com/o/3rPVxuMHmDQ",
+"秋叶原 6 号站台｜🥛 牛奶|http://xhslink.com/o/26jeK6pdU6y",
+"🍚 牛肉饭|http://xhslink.com/o/9RDDqDlsB5T",
+"💛 三色大楼|http://xhslink.com/o/2hzeaOyHo9A",
+"🏬 Bookoff|http://xhslink.com/o/8vfOzSgfOf5",
+"🏬 Bic Camera|http://xhslink.com/o/5YZmP10vZze",
+"⛩️ 神田明神社|http://xhslink.com/o/AgADxbqFmOp",
+"🚇 秋叶原 → 银座，约10分钟直达",
+"🏬 Lumine｜B1F Aux Paradis 香水|http://xhslink.com/o/46FcPmz6dY1",
+"🏬 Lumine｜1F Cosme Kitchen；SINN PURETE 发油|http://xhslink.com/o/3el6xuN3LGX",
+"🏬 Lumine｜1F Mucha 香水 / KAORU / ARTIDA OUD",
+"🏬 Lumine｜6F Plazza；7F Cosme；2F Harbs；7F Natural Kitchen",
+"🏬 OIOI 丸井百货（可不去）｜1F Sholayered；2F Randa / Chocolate / EVOL / Letalon；3–4F Jusglitty / Mystrada / Apuweiser / Rirandture / Moussy / swingle|http://xhslink.com/o/1wwvBPES954",
+"🎁 北海道どさんこプラザ 有乐町店｜札幌农学校饼干、北菓楼 开拓おかき",
+"🏬 MUJI|http://xhslink.com/o/8VsiOrm2lGW｜花生仁巧克力、睡衣、喷雾",
+"🏬 Itoya 伊东屋 13 层文具店（可以不去）",
+"🏬 三越百货（可删）｜B1F 95 折化妆品会员卡、Press Butter Sand|http://xhslink.com/o/84Vzm3CGF7r、NY Perfect Cheese|http://xhslink.com/o/3rImPAljZ89、e大饼、Shiro；1F 拉夫方巾",
+"🍤 和牛天妇罗|http://xhslink.com/o/oNe5tpFVdN｜提前10天预约",
+"👔 优衣库|http://xhslink.com/o/6jXePKn7Qs8",
+"🏬 银座 SIX|http://xhslink.com/o/7KTyEQBOelE｜10factory 橘子饼/果汁、Le Labo、Aesop、6F J-scent",
+"🥪 Ginza Sand|http://xhslink.com/o/51hgLn3FjgV｜先点单，约等半小时后折返取",
+"🏬 银座东急|http://xhslink.com/o/8QO8fsx2SIl",
+"⚠️ 18:00 离开银座 → 滨松町取行李",
+"19:20｜🚄 预约去盛冈 JR；预计21:40抵达盛冈站前东横 Inn",
+"🏨 Toyoko Inn Morioka Ekimae 入住"
+]],
+["2.4","周四","♨️ 乳头温泉乡日归 · 去青森",[
+"07:20｜起床、化妆、收行李",
+"08:30｜🧳 行李寄存酒店 + 早餐",
+"08:30｜🚶 去盛冈站",
+"08:40–09:22 左右｜🚄 盛冈 → 田泽湖",
+"09:40–10:30 左右｜🚌 田泽湖 → 乳头温泉",
+"10:30–14:00｜♨️ 泡温泉 + 午饭；妙乃汤预约|https://taenoyu.com/en/",
+"14:00–15:30｜🚌 返回田泽湖站",
+"下午｜🚄 田泽湖 → 盛冈 → 青森",
+"晚上｜🍖 Dajun 烤肉|https://xhslink.cn/o/AFd3J0tlyEo",
+"🏨 Toyoko Inn Aomori Ekimae 入住"
+]],
+["2.5","周五","🚶 弘前一日游 · 岩木山神社",[
+"06:40｜起床、化妆、早餐",
+"08:00–08:44｜🚃 青森 → 弘前",
+"09:10–09:54｜🚌 弘前 → 岩木山神社",
+"10:00–12:20｜⛩️ 岩木山神社",
+"12:25–13:00｜🚌 巴士去餐厅",
+"13:00–14:30｜🍽️ 大正浪漫餐厅|https://xhslink.cn/o/1duN1JlT8Cj",
+"14:30–16:00｜🏛️ 弘前仓库美术馆，约1h，1500Y；🍽️ 仓库美术馆餐厅：猪肉苹果咖喱（重点！）",
+"步行8分钟｜最胜院五重塔",
+"步行9分钟｜青森银行",
+"16:30 左右｜🚃 弘前 → 青森",
+"17:30–18:30｜🏨 回酒店休息、放东西",
+"19:00–20:00｜🍜 青森市区晚饭",
+"21:00｜🏨 回酒店",
+"🚶🏻‍♀️ 备选路线｜大正浪漫 → 弘前观光馆（盖章）→ 旧弘前市立图书馆 → 最胜院五重塔（门口兔子）→ 八坂神社 → 弘前当代美术馆（可不进；旁边仓库买单肩包/明信片）",
+"🚶🏻‍♀️ 17:00 后｜弘前当代美术馆 → 二手书店 → 青森银行纪念馆 → 弘前公园",
+"⛩️ 广田神社 / 金生稻荷神社|https://xhslink.cn/o/7LUfXQUcTEJ"
+]],
+["2.6","周六","❄️ 八甲田山 / 十和田湖",[
+"方案 A｜❄️ 八甲田山：青森 → 八甲田山（可用 JR Pass）",
+"上午｜❄️ 八甲田山 / 八甲田缆车",
+"中午｜🍜 山上 / 附近午饭",
+"下午｜❄️ 继续玩雪、看雪景",
+"15:00–16:00 左右｜🚌 八甲田 → 青森",
+"傍晚｜⛩️ 广田神社 / 金生稻荷神社（若 2/5 未去）",
+"晚上｜🍜 青森站附近吃饭；21:00 左右休息",
+"攻略｜八甲田山|https://xhslink.cn/o/zUxNbQKWsg",
+"方案 B｜🏞️ 冬季·奥入濑溪流 + 十和田湖跟团游|https://xhslink.cn/o/8345RUahwGf",
+"06:30–07:00｜起床、早餐",
+"07:30 左右｜🚶 到青森站",
+"早上｜🚌 JR Bus みずうみ号 → 十和田湖",
+"约10:30–11:00｜🏞️ 抵达休屋",
+"11:00–12:00｜🌲 十和田湖湖畔雪景",
+"12:00–13:00｜🍜 午餐",
+"13:00–14:00｜⛩️ 十和田神社",
+"14:00–15:00｜🏞️ 湖边继续拍照、逛休屋",
+"下午｜🚌 十和田湖 → 青森",
+"傍晚～晚上｜🏨 回青森"
+]],
+["2.7","周日","🚄 青森 → 东京 · 最后购物",[
+"08:00–09:00｜🛏️ 睡到自然醒、早餐",
+"上午｜🧳 退房",
+"10:00–11:00 左右｜🚄 青森 / 新青森 → 东京",
+"下午｜🚄 新干线上休息",
+"抵达后｜🏨 前往滨松町，入住 Meitetsu Inn Hamamatsucho",
+"晚上｜🍜 东京吃饭 / 最后购物",
+"夜间｜🛏️ 酒店休息"
+]],
+["2.8","周一","🛫 东京 → 深圳 · 回家",[
+"上午｜🧳 退房",
+"11:00｜✈️ 东京羽田 → 深圳；ANA NH965",
+"15:20｜🛬 抵达深圳宝安机场",
+"行程结束｜🇯🇵 8天7晚"
+]]
+];
+const H=[
+["2.1–2.3","Henn na Hotel Hamamatsucho","东京 · 滨松町","https://www.google.com/maps/search/?api=1&query=Henn+na+Hotel+Hamamatsucho"],
+["2.3–2.4","Toyoko Inn Morioka Ekimae","盛冈 · 盛冈站前","https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Morioka+Ekimae"],
+["2.4–2.7","Toyoko Inn Aomori Ekimae","青森 · 青森站前","https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Aomori+Ekimae"],
+["2.7–2.8","Meitetsu Inn Hamamatsucho","东京 · 滨松町","https://www.google.com/maps/search/?api=1&query=Meitetsu+Inn+Hamamatsucho"]
+];
+const B=[
+["✈️ 机票","预计 ¥5,000","实际 ¥4,586"],
+["🏨 东京 2 晚","预计 ¥22,376 日元","实际 ¥980"],
+["🏨 盛冈 1 晚","未填写","实际 ¥310"],
+["🏨 青森 3 晚","未填写","实际 ¥1,170"],
+["🏨 东京 1 晚","预计 ¥10,921 日元","实际 ¥480"],
+["🚇 交通","约 ¥1,300","待填写"],
+["🍜 餐饮","¥3,000","待填写"],
+["🎠 迪士尼门票","¥1,000","待填写"],
+["🎢 富士急乐园","约 ¥600","待填写"],
+["💴 日元现金","待填写","待填写"]
+];
+function linkify(s){let p=s.split('|');if(p.length>1)return p[0]+' <a href="'+p[1]+'" target="_blank" rel="noopener">↗</a>';return s}
+const tabs=document.getElementById('daytabs');D.forEach((d,i)=>{let b=document.createElement('button');b.className='daytab';b.textContent='D'+(i+1)+' · '+d[0];b.onclick=()=>show(i);tabs.appendChild(b)});
+function show(i){document.querySelectorAll('.daytab').forEach((b,j)=>{b.classList.toggle('active',i===j);if(i===j)b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})});const d=D[i];document.getElementById('day').innerHTML='<div class="day-card"><div class="meta">DAY '+(i+1)+' / 8</div><div class="date">'+d[0]+'</div><div class="week">'+d[1]+'</div><div class="title">'+d[2]+'</div><div class="events"><div class="event">'+d[3].map(x=>'<div class="item">'+linkify(x)+'</div>').join('')+'</div></div></div>'}show(0);
+const hotelList=document.getElementById('hotelList');H.forEach(h=>{hotelList.innerHTML+=`<div class="hotel"><div class="stay">${h[0]}</div><h3>${h[1]}</h3><div class="city">${h[2]}</div><div class="hotel-links"><a href="${h[3]}" target="_blank" rel="noopener">📍 Google Maps</a></div></div>`});
+const budgetList=document.getElementById('budgetList');B.forEach((b,i)=>{budgetList.innerHTML+=`<div class="budget-row ${i===B.length-1?'total':''}"><span>${b[0]}<br><span class="muted">${b[1]}</span></span><b>${b[2]}</b></div>`});
+</script></body></html>
