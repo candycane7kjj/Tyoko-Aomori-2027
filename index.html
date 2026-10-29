@@ -81,16 +81,10 @@ const D=[
 ]],
 ["2.3","周三","🎮 秋叶原 · 银座 → 盛冈",[
 "09:20｜出门",
-"🚇 滨松町 → 秋叶原 JR 站，约10分钟直达",
-"｜✡️ 秋叶原｜🎁 冰箱贴|http://xhslink.com/o/5bDwpDF7hUt",
-"｜🍰 泡芙|http://xhslink.com/o/3rPVxuMHmDQ",
-"｜🥛 牛奶|http://xhslink.com/o/26jeK6pdU6y",
-"｜🍚 牛肉饭|http://xhslink.com/o/9RDDqDlsB5T",
-"｜💛 三色大楼|http://xhslink.com/o/2hzeaOyHo9A",
-"｜🏬 Bookoff|http://xhslink.com/o/8vfOzSgfOf5",
-"｜🏬 Bic Camera|http://xhslink.com/o/5YZmP10vZze",
-"｜⛩️ 神田明神社|http://xhslink.com/o/AgADxbqFmOp",
-"｜🚇 秋叶原 → 银座，约10分钟直达",
+"上午｜🚶 到东京塔",
+"｜🗼 东京塔二楼攻略|http://xhslink.com/o/3gTw6BUSqwY",
+"｜🐟 鲷鱼烧|http://xhslink.com/o/NqUZoIzcps",
+"｜🚇 东京塔周边 → 银座，地铁约15分钟（视出发车站而定）",
 "｜🏬 Lumine｜B1F Aux Paradis 香水|http://xhslink.com/o/46FcPmz6dY1",
 "｜🏬 Lumine｜1F Cosme Kitchen；SINN PURETE 发油|http://xhslink.com/o/3el6xuN3LGX",
 "｜🏬 Lumine｜1F Mucha 香水 / KAORU / ARTIDA OUD",
@@ -163,16 +157,14 @@ const D=[
 "下午｜🚌 十和田湖 → 青森",
 "傍晚～晚上｜🏨 回青森"
 ]],
-["2.7","周日","🚄 青森 → 东京 · 东京塔 · 最后购物",[
-"08:00–09:00｜🛏️ 早餐、收拾行李",
-"09:20｜🧳 出门（沿用原来的出门时间）",
-"上午｜🚄 青森 / 新青森 → 东京（按实际车次预留约 3–4 小时）",
-"抵达后｜🏨 前往滨松町，入住 Meitetsu Inn Hamamatsucho / 寄存行李",
-"下午｜🗼 前往东京塔",
-"攻略｜🗼 东京塔二楼攻略|http://xhslink.com/o/3gTw6BUSqwY",
-"顺路｜🐟 鲷鱼烧|http://xhslink.com/o/NqUZoIzcps",
+["2.7","周日","🚄 青森 → 东京 · 东京塔 / 银座补购",[
+"08:00–09:00｜🛏️ 睡到自然醒、早餐",
+"上午｜🧳 退房",
+"10:00–11:00｜🚄 青森 / 新青森 → 东京",
+"下午｜🚄 新干线上休息",
+"抵达后｜🏨 前往滨松町，入住 Meitetsu Inn Hamamatsucho",
 "晚上｜🍜 东京吃饭 / 最后购物",
-"夜间｜🛏️ 回酒店休息"
+"夜间｜🛏️ 酒店休息"
 ]],
 ["2.8","周一","🛫 东京 → 深圳 · 回家",[
 "上午｜🧳 退房",
@@ -205,18 +197,19 @@ function show(i){document.querySelectorAll('.daytab').forEach((b,j)=>{b.classLis
 if(i===2){
   const day3 = `
     <div class="day-card">
-      <div class="meta">DAY 3 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">${d[2]}</div>
+      <div class="meta">DAY 3 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🎮 秋叶原 · 银座 → 盛冈</div>
       <div class="events">
-        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">滨松町 → 秋叶原 JR 站，约 10 分钟直达</div></div>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">滨松町 JR 站 → 秋叶原 JR 站，山手线约 10 分钟直达</div></div>
         <section class="day3-zone">
           <div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🎮 秋叶原</div></div>
           <div class="zone-body">
+            <div class="zone-item"><div class="zone-label">上午</div><div>出门后先逛秋叶原，按想买的店灵活安排，不必每家都进。</div></div>
             <div class="zone-item"><div class="zone-label">购物</div><div>🎁 <a href="http://xhslink.com/o/5bDwpDF7hUt" target="_blank" rel="noopener">冰箱贴</a><br>💛 <a href="http://xhslink.com/o/2hzeaOyHo9A" target="_blank" rel="noopener">三色大楼</a><br>🏬 <a href="http://xhslink.com/o/8vfOzSgfOf5" target="_blank" rel="noopener">Bookoff</a><br>🏬 <a href="http://xhslink.com/o/5YZmP10vZze" target="_blank" rel="noopener">Bic Camera</a></div></div>
             <div class="zone-item"><div class="zone-label">吃喝</div><div>🍰 <a href="http://xhslink.com/o/3rPVxuMHmDQ" target="_blank" rel="noopener">泡芙</a>　🥛 <a href="http://xhslink.com/o/26jeK6pdU6y" target="_blank" rel="noopener">牛奶</a>　🍚 <a href="http://xhslink.com/o/9RDDqDlsB5T" target="_blank" rel="noopener">牛肉饭</a></div></div>
             <div class="zone-item"><div class="zone-label">景点</div><div>⛩️ <a href="http://xhslink.com/o/AgADxbqFmOp" target="_blank" rel="noopener">神田明神社</a></div></div>
           </div>
         </section>
-        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">秋叶原 → 银座，约 10 分钟直达</div></div>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">秋叶原 → 银座：可乘东京 Metro 日比谷线，约 10 分钟左右；以当天导航为准</div></div>
         <section class="day3-zone">
           <div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🛍️ 银座</div></div>
           <div class="zone-body">
@@ -230,13 +223,50 @@ if(i===2){
         </section>
         <section class="day3-finish">
           <div class="finish-heading"><span>🚄</span>离开东京 · 前往盛冈</div>
-          <div class="zone-item"><div class="zone-label">18:00</div><div>离开银座 → 滨松町取行李</div></div>
-          <div class="zone-item"><div class="zone-label">19:20</div><div>🚄 预约去盛冈 JR</div></div>
+          <div class="zone-item"><div class="zone-label">约 17:30</div><div>银座购物告一段落，预留时间回滨松町取行李</div></div>
+          <div class="zone-item"><div class="zone-label">18:00 前</div><div>从银座离开 → 滨松町取行李 → 前往东京站；建议预留充足换乘时间</div></div>
+          <div class="zone-item"><div class="zone-label">19:20</div><div>🚄 预约去盛冈 JR（按实际车票核对出发站与时间）</div></div>
           <div class="zone-item"><div class="zone-label">约 21:40</div><div>抵达盛冈站，入住 Toyoko Inn Morioka Ekimae</div></div>
         </section>
       </div>
     </div>`;
   document.getElementById('day').innerHTML=day3;
+  return;
+}
+if(i===6){
+  const day7 = `
+    <div class="day-card">
+      <div class="meta">DAY 7 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🚄 青森 → 东京 · 东京塔 / 银座补购</div>
+      <div class="events">
+        <section class="day3-zone">
+          <div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🚄 青森 → 东京</div></div>
+          <div class="zone-body">
+            <div class="zone-item"><div class="zone-label">08:00–09:00</div><div>🛏️ 睡到自然醒、早餐</div></div>
+            <div class="zone-item"><div class="zone-label">上午</div><div>🧳 退房</div></div>
+            <div class="zone-item"><div class="zone-label">出发</div><div>🚄 青森 / 新青森 → 东京（原计划约 10:00–11:00 出发，建议按实际车次核对）</div></div>
+            <div class="zone-item"><div class="zone-label">抵达后</div><div>🏨 前往滨松町，入住 Meitetsu Inn Hamamatsucho；放好行李后再出门</div></div>
+          </div>
+        </section>
+        <div class="day3-transit"><div class="transit-label">🚶 交通</div><div class="transit-detail">滨松町酒店 → 东京塔，步行约 10–15 分钟（按酒店实际入口和路线导航）</div></div>
+        <section class="day3-zone">
+          <div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🗼 东京塔</div></div>
+          <div class="zone-body">
+            <div class="zone-item"><div class="zone-label">下午</div><div>从酒店附近步行前往，时间可按青森抵达东京后的实际情况灵活调整。</div></div>
+            <div class="zone-item"><div class="zone-label">攻略</div><div>🗼 <a href="http://xhslink.com/o/3gTw6BUSqwY" target="_blank" rel="noopener">东京塔二楼攻略</a><br>🐟 <a href="http://xhslink.com/o/NqUZoIzcps" target="_blank" rel="noopener">鲷鱼烧</a></div></div>
+          </div>
+        </section>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">东京塔周边 → 银座，公共交通约 15–20 分钟，按当天出发站导航</div></div>
+        <section class="day3-zone">
+          <div class="zone-heading"><span class="zone-num">03</span><div class="zone-name">🛍️ 银座补充购物（可选）</div></div>
+          <div class="zone-body">
+            <div class="zone-item"><div class="zone-label">补购</div><div>回 Day 3 的银座清单查漏补缺，优先买当天没来得及买到的东西，不需要重复逛完所有百货。</div></div>
+            <div class="zone-item"><div class="zone-label">交通</div><div>逛完后返回滨松町酒店，步行或乘公共交通按当时路线选择。</div></div>
+          </div>
+        </section>
+        <section class="day3-finish"><div class="finish-heading"><span>🌙</span>回酒店休息</div><div class="zone-item"><div class="zone-label">夜间</div><div>🛏️ 回 Meitetsu Inn Hamamatsucho，整理行李，为次日早上 11:00 羽田起飞做准备</div></div></section>
+      </div>
+    </div>`;
+  document.getElementById('day').innerHTML=day7;
   return;
 }
 let html='<div class="day-card"><div class="meta">DAY '+(i+1)+' / 8</div><div class="date">'+d[0]+'</div><div class="week">'+d[1]+'</div><div class="title">'+d[2]+'</div><div class="events">';let inPart=false;d[3].forEach(x=>{if(x==='__PLAN_A__'||x==='__PLAN_B__'){if(inPart)html+='</div></div>';inPart=true;html+='<div class="part"><div class="part-title">'+(x==='__PLAN_A__'?'PLAN A · 八甲田山（青森 → 八甲田山，可用 JR Pass）':'PLAN B · 冬季奥入濑溪流 + 十和田湖跟团游 <a href="https://xhslink.cn/o/8345RUahwGf" target="_blank" rel="noopener">↗</a>')+'</div><div class="event">';return}let p=x.split('｜');let time=p.length>1?p.shift():'';let detail=p.join('｜');html+='<div class="item"><div class="time">'+time+'</div><div class="detail">'+linkify(detail)+'</div></div>'});if(inPart)html+='</div></div>';else html+='</div>';html+='</div></div>';document.getElementById('day').innerHTML=html}show(0);
