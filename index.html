@@ -8,17 +8,34 @@ main{max-width:760px;margin:auto;padding:0 15px 45px}.hero{height:245px;margin:0
 .flight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flight{background:#fff;border:1px solid #e0eaed;border-radius:20px;padding:15px 16px;box-shadow:0 8px 22px rgba(51,92,104,.06)}.flight .k{font-size:11px;color:#7d9098;font-weight:800}.flight .route{font-size:17px;font-weight:900;margin:5px 0 3px}.flight .info{font-size:12px;color:#637981;line-height:1.55}
 .link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.quick{display:block;background:#fff;border:1px solid #dce8eb;border-radius:18px;padding:14px;color:#337eae;text-decoration:none;font-size:12px;font-weight:900;box-shadow:0 7px 18px rgba(51,92,104,.05)}.quick span{display:block;color:#7b8e95;font-size:10px;font-weight:700;margin-top:5px}
 .daytabs{display:flex;gap:7px;overflow:auto;margin:14px 0 0;padding:2px 1px 5px;scrollbar-width:none}.daytabs::-webkit-scrollbar{display:none}.daytab{border:1px solid #dbe8eb;background:#fff;color:#789099;border-radius:999px;font-size:11px;font-weight:850;padding:8px 12px;white-space:nowrap;box-shadow:0 3px 10px rgba(51,92,104,.05)}.daytab.active{color:#fff;background:#337eae;border-color:#337eae;box-shadow:0 6px 15px rgba(51,126,174,.2)}#day{margin-top:10px}
-.day-card{background:var(--card);border:1px solid #cfe5eb;border-radius:27px;padding:21px 18px 23px;box-shadow:0 12px 30px #5a9eb51c}.meta{font-size:11px;font-weight:900;color:#5b8999;letter-spacing:.5px}.date{font-size:27px;font-weight:900;line-height:1.15;margin-top:4px}.week{font-size:12px;color:#68818a;margin-top:3px}.title{font-size:20px;font-weight:900;line-height:1.35;margin-top:16px}.events{margin-top:19px}.event{padding:12px 0;border-top:1px solid #fff9}.event:first-child{border-top:0;padding-top:0}.item{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:11px;font-size:14px;line-height:1.6;margin:6px 0}.time{font-size:12px;font-weight:850;color:#5d8998;text-align:right;white-space:normal;padding-top:2px}.detail{min-width:0}.item a{color:#337eae;text-decoration:none;font-weight:850;border-bottom:1px solid #8abdd266}.part{margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.9)}
+.day-card{background:var(--card);border:1px solid #cfe5eb;border-radius:27px;padding:21px 18px 23px;box-shadow:0 12px 30px #5a9eb51c}.meta{font-size:11px;font-weight:900;color:#5b8999;letter-spacing:.5px}.date{font-size:27px;font-weight:900;line-height:1.15;margin-top:4px}.week{font-size:12px;color:#68818a;margin-top:3px}.title{font-size:20px;font-weight:900;line-height:1.35;margin-top:16px}.events{margin-top:19px}.event{padding:12px 0;border-top:1px solid #fff9}.event:first-child{border-top:0;padding-top:0}.item{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:11px;font-size:14px;line-height:1.6;margin:6px 0}.time{white-space:nowrap;font-size:12px;font-weight:850;color:#5d8998;text-align:right;white-space:normal;padding-top:2px}.detail{min-width:0}.item a{color:#337eae;text-decoration:none;font-weight:850;border-bottom:1px solid #8abdd266}.part{margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.9)}
 /* Day 3: soft blue surfaces, restrained ink colors, clear store-floor hierarchy */
-.day3-zone{background:#d9e8f0;border:1px solid #c5d9e4;border-radius:14px;padding:13px 15px 12px;margin:12px 0;box-shadow:0 2px 7px rgba(45,75,95,.045)}
+.day3-zone{background:#f0f5f7;border:1px solid #dce7eb;border-radius:14px;padding:13px 15px 12px;margin:12px 0;box-shadow:0 2px 7px rgba(45,75,95,.035)}
 .day3-zone:first-child{margin-top:0}
+
+/* Day 7: one continuous alignment grid across every section */
+.day7-events .zone-item{grid-template-columns:78px minmax(0,1fr);column-gap:12px}
+.day7-events .day3-transit{grid-template-columns:78px minmax(0,1fr);column-gap:12px;margin-left:0;margin-right:0}
+@media(max-width:520px){
+  .day7-events .zone-item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
+  .day7-events .day3-transit{grid-template-columns:64px minmax(0,1fr);column-gap:8px;margin-left:0;margin-right:0}
+}
+
+.mall-card{margin:10px 0;padding:10px 12px;background:#e3edf1;border:1px solid #d1e0e6;border-radius:11px}
+.mall-title{font-size:13px;font-weight:850;line-height:1.6;color:#2b5368}
+.mall-title a{font-weight:850}
+.mall-content{padding:5px 0 0 22px;font-size:12px;line-height:1.85;color:#334d5a}
+.mall-content>div{margin:1px 0}
+.mall-note{display:inline-block;margin-left:7px;color:#71858d;font-size:11px;font-weight:600}
+
 .zone-heading{display:flex;align-items:center;gap:10px;padding-bottom:9px;border-bottom:1px solid #c0d4df}
 .zone-num{display:flex;align-items:center;justify-content:center;flex:0 0 27px;height:27px;border-radius:9px;background:#c3d9e5;color:#40596a;font-size:10px;font-weight:800}
 .zone-name{font-size:15px;font-weight:800;color:#263d4c;line-height:1.35;letter-spacing:.1px}
 .zone-sub{font-size:11px;color:#647987;margin-top:3px}
 .zone-body{padding-top:9px}
-.zone-item{display:grid;grid-template-columns:66px minmax(0,1fr);gap:10px;margin:9px 0;font-size:13px;line-height:1.7;color:#263844}
-.zone-label{font-size:11px;color:#536b7b;font-weight:800;padding-top:2px;letter-spacing:.1px}
+.zone-item{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px;margin:9px 0;font-size:13px;line-height:1.7;color:#263844}
+.day3-zone .zone-item{background:#e3edf1;border:1px solid #d5e2e7;border-radius:10px;padding:8px 10px}
+.zone-label{white-space:nowrap;font-size:11px;color:#536b7b;font-weight:800;padding-top:2px;letter-spacing:.1px}
 .zone-label a{color:inherit;text-decoration:none;border-bottom:1px solid #9fb7c6;padding-bottom:1px}
 .zone-links{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0 76px}
 .zone-links a{display:inline-flex;align-items:center;gap:5px;padding:6px 9px;background:#e8f0f4;border:1px solid #c8d9e2;border-radius:8px;font-size:12px;font-weight:750;color:#344f60;text-decoration:none}
@@ -26,28 +43,51 @@ main{max-width:760px;margin:auto;padding:0 15px 45px}.hero{height:245px;margin:0
 .day3-transit{display:grid;grid-template-columns:58px minmax(0,1fr);gap:10px;align-items:center;margin:12px 5px;padding:10px 13px;border-left:3px solid #9cb9c9;background:#edf3f6;border-radius:0 10px 10px 0}
 .transit-label{font-size:11px;font-weight:800;color:#526a7a;letter-spacing:.2px}
 .transit-detail{font-size:12px;line-height:1.6;font-weight:650;color:#2d414e}
-.day3-finish{margin-top:15px;padding:15px 16px;background:#d3e4ed;border:1px solid #bfd5e1;border-radius:15px}
+.day3-finish{margin-top:15px;padding:15px 16px;background:#f0f5f7;border:1px solid #dce7eb;border-radius:15px}
 .finish-heading{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:850;color:#263d4c;padding-bottom:10px;border-bottom:1px solid #bfd2dd;margin-bottom:9px}
-.finish-heading span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#c0d7e3;border-radius:9px;font-size:15px}
+.finish-heading span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#e3edf1;border-radius:9px;font-size:15px}
 .day3-zone a:not(.zone-label a),.day3-finish a{color:#365b72;text-decoration:none;border-bottom:1px solid #a8c1cf}
 .day3-zone a:hover,.day3-finish a:hover{color:#1f3d51}
 .day3-finish .zone-item{margin:8px 0}
-@media(max-width:520px){.day3-zone{padding:12px 12px}.zone-links{margin-left:0}.day3-transit{grid-template-columns:48px minmax(0,1fr);gap:7px;margin-left:1px;margin-right:1px}.zone-item{grid-template-columns:48px minmax(0,1fr)}}
+@media(max-width:520px){.day3-zone{padding:12px 12px}.zone-links{margin-left:0}.day3-transit{grid-template-columns:48px minmax(0,1fr);gap:7px;margin-left:1px;margin-right:1px}.zone-item{grid-template-columns:max-content minmax(0,1fr);gap:7px}.zone-label{font-size:10px}}
 .part:first-child{margin-top:0;padding-top:0;border-top:0}.part-title{font-size:16px;font-weight:900;color:#2f789f;margin:0 0 10px}.sub{font-size:12px;color:#647b83;margin:3px 0 3px 17px}.note{background:#ffffff99;border:1px solid #ffffff;border-radius:14px;padding:10px 12px;font-size:12px;line-height:1.55;margin-top:9px}
 .hotel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.hotel{background:#fff;border:1px solid #dce8eb;border-radius:22px;padding:16px;box-shadow:0 10px 28px rgba(51,92,104,.08)}.hotel .stay{font-size:10px;color:#78909a;font-weight:800}.hotel h3{margin:6px 0 5px;font-size:17px;line-height:1.3;color:#2f789f}.hotel .city{font-size:12px;color:#667e86;line-height:1.5}.hotel-links{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.hotel-links a{display:inline-flex;padding:7px 9px;border-radius:999px;background:#eef6f8;color:#337eae;text-decoration:none;font-size:10px;font-weight:850}
 .budget{background:#fff;border:1px solid #e1ebee;border-radius:20px;padding:10px 16px}.budget-row{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid #edf2f3;font-size:13px}.budget-row:last-child{border-bottom:0}.budget-row b{white-space:nowrap}.budget .muted{color:#8a9ba1;font-weight:600}.budget .total{font-size:15px;color:#2f789f}
 .todo{display:grid;grid-template-columns:1fr 1fr;gap:10px}.todo-item{display:flex;align-items:center;gap:10px;background:var(--card2);border:0;border-radius:14px;padding:12px 14px;font-size:13px;cursor:pointer}.todo-item input{width:18px;height:18px;accent-color:#337eae;flex:0 0 auto}.todo-item:has(input:checked){opacity:.62;text-decoration:line-through}
 footer{text-align:center;color:#9aa8ad;font-size:10px;padding:28px 0 8px}@media(max-width:720px){.flight-grid,.link-grid{grid-template-columns:1fr}.todo{grid-template-columns:1fr}}@media(max-width:520px){.header-in{padding:0 13px}.brand{font-size:14px}.nav{gap:10px}.nav a{font-size:11px}main{padding-left:13px;padding-right:13px}.hero{height:220px;margin-left:-13px;margin-right:-13px}.hotel-grid{grid-template-columns:1fr}.day-card{padding:19px 16px 21px}.item{grid-template-columns:82px minmax(0,1fr);column-gap:9px}.date{font-size:25px}.title{font-size:18px}}
+
+.countdown-card{margin:0 0 30px;padding:16px 17px 13px;background:#f0f5f7;border:1px solid #dce7eb;border-radius:18px;box-shadow:0 7px 20px rgba(57,91,105,.055)}
+.countdown-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.countdown-kicker{font-size:10px;font-weight:900;letter-spacing:1px;color:#66818d}
+.countdown-date{font-size:11px;font-weight:750;color:#7c929b}
+.countdown-status{font-size:13px;font-weight:800;color:#425e6b;margin:12px 0 8px}
+.countdown-units{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.countdown-unit{display:flex;align-items:baseline;justify-content:center;gap:4px;padding:10px 4px;background:#e1ebef;border:1px solid #d2e0e6;border-radius:11px;color:#526d79;min-width:0}
+.countdown-unit b{font-size:clamp(20px,5vw,27px);line-height:1;font-weight:900;font-variant-numeric:tabular-nums;color:#355564}
+.countdown-unit span{font-size:10px;font-weight:750;white-space:nowrap}
+.countdown-foot{font-size:10px;color:#8a9da5;margin-top:10px}
+@media(max-width:380px){.countdown-card{padding:14px 12px}.countdown-units{gap:5px}.countdown-unit{gap:2px}.countdown-unit span{font-size:9px}}
 </style></head><body>
 <header class="header"><div class="header-in"><div class="brand">Japan · 2027 ❄️</div><nav class="nav"><a href="#flights">航班</a><a href="#links">链接</a><a href="#itinerary">行程</a><a href="#hotels">酒店</a><a href="#budget">预算</a><a href="#todo">Todo</a></nav></div></header>
 <main>
 <section class="hero"><div><h1>Japan · 2027</h1><p>Tokyo · Morioka · Aomori · Tohoku</p><div class="dates">2027.2.1 — 2.8 · 8天7晚</div></div></section>
+<section class="countdown-card" aria-live="off">
+  <div class="countdown-top"><span class="countdown-kicker">✈️ JAPAN TRIP COUNTDOWN</span><span class="countdown-date">2027.02.01 · 17:25</span></div>
+  <div class="countdown-status" id="countdownStatus">距离出发还有</div>
+  <div class="countdown-units" id="countdownUnits">
+    <div class="countdown-unit"><b id="cdDays">---</b><span>天</span></div>
+    <div class="countdown-unit"><b id="cdHours">--</b><span>小时</span></div>
+    <div class="countdown-unit"><b id="cdMinutes">--</b><span>分钟</span></div>
+    <div class="countdown-unit"><b id="cdSeconds">--</b><span>秒</span></div>
+  </div>
+  <div class="countdown-foot">深圳出发 · ANA NH966</div>
+</section>
 <section class="section" id="flights"><div class="label">✈️ 航班</div><div class="flight-grid">
 <div class="flight"><div class="k">2.1 · 周一 · 去程</div><div class="route">深圳 → 东京</div><div class="info">17:25–22:20 · 3时55分<br>ANA NH966 · 经济舱 · 有餐食<br>波音 787（大） · SZX 宝安机场 → HND 羽田机场</div></div>
 <div class="flight"><div class="k">2.8 · 周一 · 返程</div><div class="route">东京 → 深圳</div><div class="info">11:00–15:20 · 5时20分<br>ANA NH965 · 经济舱<br>波音 787（大） · HND 羽田机场 → SZX 宝安机场</div></div>
 </div></section>
 <section class="section" id="links"><div class="label">🔗 旅行常用链接</div><div class="link-grid">
-<a class="quick" href="https://www.eki-net.com/zh-CHS/jreast-train-reservation/reserve/wb/UseTicketSelect/Index" target="_blank">🎫 东日本票 & 新干线指定席<span>JR-EAST Train Reservation</span></a>
+<a class="quick" href="https://www.eki-net.com/zh-CHS/jreast-train-reservation/reserve/wb/PurchaseTicketSelect/Index" target="_blank">🎫 东日本票 & 新干线指定席<span>JR-EAST Train Reservation</span><small style="display:block;margin-top:5px;font-size:11px;color:#71858d">在滨松町地铁站取票</small></a>
 <a class="quick" href="http://xhslink.com/o/2wuYXyeWF60" target="_blank">🛍️ 逛街女装总览<span>小红书攻略</span></a>
 <a class="quick" href="https://taenoyu.com/en/" target="_blank">♨️ 妙乃汤预约<span>Taenoyu 官方网站</span></a>
 </div></section>
@@ -197,36 +237,36 @@ function show(i){document.querySelectorAll('.daytab').forEach((b,j)=>{b.classLis
 if(i===2){
   const day3 = `
     <div class="day-card">
-      <div class="meta">DAY 3 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🎮 秋叶原 · 银座 → 盛冈</div>
+      <div class="meta">DAY 3 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🛍️ 涩谷 · 原宿 · 表参道 → 盛冈</div>
       <div class="events">
-        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">滨松町 JR 站 → 秋叶原 JR 站，山手线约 10 分钟直达</div></div>
-        <section class="day3-zone">
-          <div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🎮 秋叶原</div></div>
-          <div class="zone-body">
-            <div class="zone-item"><div class="zone-label">上午</div><div>出门后先逛秋叶原，按想买的店灵活安排，不必每家都进。</div></div>
-            <div class="zone-item"><div class="zone-label">购物</div><div>🎁 <a href="http://xhslink.com/o/5bDwpDF7hUt" target="_blank" rel="noopener">冰箱贴</a><br>💛 <a href="http://xhslink.com/o/2hzeaOyHo9A" target="_blank" rel="noopener">三色大楼</a><br>🏬 <a href="http://xhslink.com/o/8vfOzSgfOf5" target="_blank" rel="noopener">Bookoff</a><br>🏬 <a href="http://xhslink.com/o/5YZmP10vZze" target="_blank" rel="noopener">Bic Camera</a></div></div>
-            <div class="zone-item"><div class="zone-label">吃喝</div><div>🍰 <a href="http://xhslink.com/o/3rPVxuMHmDQ" target="_blank" rel="noopener">泡芙</a>　🥛 <a href="http://xhslink.com/o/26jeK6pdU6y" target="_blank" rel="noopener">牛奶</a>　🍚 <a href="http://xhslink.com/o/9RDDqDlsB5T" target="_blank" rel="noopener">牛肉饭</a></div></div>
-            <div class="zone-item"><div class="zone-label">景点</div><div>⛩️ <a href="http://xhslink.com/o/AgADxbqFmOp" target="_blank" rel="noopener">神田明神社</a></div></div>
-          </div>
-        </section>
-        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">秋叶原 → 银座：可乘东京 Metro 日比谷线，约 10 分钟左右；以当天导航为准</div></div>
-        <section class="day3-zone">
-          <div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🛍️ 银座</div></div>
-          <div class="zone-body">
-            <div class="zone-item"><div class="zone-label">Lumine</div><div>🏬 B1F <a href="http://xhslink.com/o/46FcPmz6dY1" target="_blank" rel="noopener">Aux Paradis 香水</a><br>🏬 1F <a href="http://xhslink.com/o/3el6xuN3LGX" target="_blank" rel="noopener">Cosme Kitchen；SINN PURETE 发油</a><br>🏬 1F Mucha 香水 / KAORU / ARTIDA OUD<br>🏬 2F Harbs<br>🏬 6F Plazza<br>🏬 7F Cosme<br>🏬 7F Natural Kitchen</div></div>
-            <div class="zone-item"><div class="zone-label"><a href="http://xhslink.com/o/1wwvBPES954" target="_blank" rel="noopener">OIOI</a></div><div>🏬 1F Sholayered<br>🏬 2F Randa / Chocolate / EVOL / Letalon<br>🏬 3–4F Jusglitty / Mystrada / Apuweiser / Rirandture / Moussy / swingle<br><span class="muted">（可不去）</span></div></div>
-            <div class="zone-item"><div class="zone-label">三越</div><div>🏬 B1F 95 折化妆品会员卡、<a href="http://xhslink.com/o/84Vzm3CGF7r" target="_blank" rel="noopener">Press Butter Sand</a>、<a href="http://xhslink.com/o/3rImPAljZ89" target="_blank" rel="noopener">NY Perfect Cheese</a>、e大饼、Shiro<br>🏬 1F 拉夫方巾<br><span class="muted">（可删）</span></div></div>
-            <div class="zone-item"><div class="zone-label">银座 SIX</div><div>🏬 <a href="http://xhslink.com/o/7KTyEQBOelE" target="_blank" rel="noopener">银座 SIX</a><br>10factory 橘子饼/果汁、Le Labo、Aesop、6F J-scent</div></div>
-            <div class="zone-item"><div class="zone-label">顺路买</div><div>🎁 北海道どさんこプラザ 有乐町店：札幌农学校饼干、北菓楼 开拓おかき<br>🏬 <a href="http://xhslink.com/o/8VsiOrm2lGW" target="_blank" rel="noopener">MUJI</a>：花生仁巧克力、睡衣、喷雾<br>🏬 <a href="http://xhslink.com/o/8QO8fsx2SIl" target="_blank" rel="noopener">银座东急</a><br>🏬 Itoya 伊东屋 13 层文具店（可以不去）<br>👔 <a href="http://xhslink.com/o/6jXePKn7Qs8" target="_blank" rel="noopener">优衣库</a></div></div>
-            <div class="zone-item"><div class="zone-label">吃饭</div><div>🍤 <a href="http://xhslink.com/o/oNe5tpFVdN" target="_blank" rel="noopener">和牛天妇罗</a>｜提前10天预约<br>🥪 <a href="http://xhslink.com/o/51hgLn3FjgV" target="_blank" rel="noopener">Ginza Sand</a>｜先点单，约等半小时后折返取</div></div>
-          </div>
-        </section>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">滨松町 → 原宿站，约 30 分钟；按当天导航选择路线</div></div>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🛍️ 涩谷 Shibuya</div></div><div class="zone-body">
+          <div class="mall-card lunch-card"><div class="mall-title">🍣 午餐</div><div class="mall-content"> <a href="https://www.google.com/maps/search/?api=1&query=Sushi+no+Midori+Shibuya" target="_blank" rel="noopener">Sushi no Midori 涩谷店</a>｜尽量 11:20 前到；点单参考大众点评</div></div></div>
+          <div class="mall-card"><div class="mall-title">🎮 Shibuya PARCO</div><div class="mall-content"><b>6F：</b><a href="https://www.google.com/maps/search/?api=1&query=Nintendo+Tokyo+Shibuya+PARCO" target="_blank" rel="noopener">Nintendo TOKYO</a>　·　<a href="https://www.google.com/maps/search/?api=1&query=Pokemon+Center+Shibuya+PARCO" target="_blank" rel="noopener">Pokémon Store</a><span class="mall-note">10:00 开门</span></div></div>
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/3FxLB81WST6" target="_blank" rel="noopener">Scramble Square（楼层指引）</a><span class="mall-note">可跳过：没什么特别的</span></div></div>
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/Ahcpn6Ew75X" target="_blank" rel="noopener">Hikariel（楼层指引）</a><span class="mall-note">1–5F 小众精品店，可选</span></div><div class="mall-content"><div>🌷 <a href="https://www.google.com/maps/search/?api=1&query=Shiro+Hikarie+Shibuya" target="_blank" rel="noopener">Shiro</a>（香水、精油）</div><div>🌻 <a href="https://www.google.com/maps/search/?api=1&query=Snidel+Home+Hikarie+Shibuya" target="_blank" rel="noopener">Snidel Home</a></div><div>🌻 <a href="https://www.google.com/maps/search/?api=1&query=Cosme+Kitchen+Hikarie+Shibuya" target="_blank" rel="noopener">Cosme Kitchen</a></div><div>🍰 <b>B2F：</b><a href="http://xhslink.com/o/6Ga3ufejzUr" target="_blank" rel="noopener">Pierre Hermé（蛋糕）</a></div><div>🍰 <a href="http://xhslink.com/o/13gU5PjPqOm" target="_blank" rel="noopener">Harbs（蛋糕店指引）</a><span class="mall-note">原清单未标楼层</span></div></div></div>
+          <div class="mall-card"><div class="mall-title">💿 <a href="https://www.google.com/maps/search/?api=1&query=Tower+Records+Shibuya" target="_blank" rel="noopener">Tower Records</a><span class="mall-note">亚洲最大唱片店</span></div><div class="mall-content"><div><b>5F：</b>K-pop（泰妍相关好像比较少）</div><div><b>7F：</b>欧美音乐</div></div></div>
+          <div class="mall-card"><div class="mall-title">🥿 <a href="https://www.google.com/maps/search/?api=1&query=Onitsuka+Tiger+Shibuya" target="_blank" rel="noopener">Onitsuka Tiger</a></div><div class="mall-content">丽珍鞋，穿着很舒服。</div></div>
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/4ll5Ws52Gxn" target="_blank" rel="noopener">Shibuya 109（楼层指引）</a><span class="mall-note">可选，偏高中生风格</span></div><div class="mall-content"><div>👚 <a href="http://xhslink.com/o/7c98UtTLwPg" target="_blank" rel="noopener">109 好看服装店指引</a></div><div>Moussy　·　Darich　·　Kastane</div></div></div>
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/9OYbtBWV06Z" target="_blank" rel="noopener">Loft（楼层指引）</a></div></div>
+          <div class="mall-card"><div class="mall-title">📷 <a href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Shibuya" target="_blank" rel="noopener">Big Camera</a></div><div class="mall-content">相机、相纸；如果没逛银座，可以看看。</div></div>
+        </div></section>
+        <div class="day3-transit"><div class="transit-label">🚶 步行</div><div class="transit-detail">涩谷 → 原宿，步行约 15 分钟</div></div>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🎀 原宿 Harajuku</div></div><div class="zone-body">
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/5ah8L1EqjMY" target="_blank" rel="noopener">and ST 集合店</a></div></div>
+          <div class="mall-card"><div class="mall-title">🏬 <a href="http://xhslink.com/o/AyUY1mZjvof" target="_blank" rel="noopener">Laforet（楼层指引）</a></div><div class="mall-content"><div><b>Laforet 2F（按原清单顺序归类）：</b></div><div>🌷 <a href="https://www.google.com/maps/search/?api=1&query=Sholayered+Harajuku" target="_blank" rel="noopener">Sholayered 香水</a></div><div>🥿 <a href="https://www.google.com/maps/search/?api=1&query=VIVAIA+Harajuku" target="_blank" rel="noopener">VIVAIA（一定要看）</a></div></div></div>
+          <div class="mall-card"><div class="mall-title">🛍️ 原宿其他店铺</div><div class="mall-content"><div>💄 <a href="https://www.google.com/maps/search/?api=1&query=Cosme+Harajuku" target="_blank" rel="noopener">Cosme</a>（可能没有药妆店划算）</div><div>🥿 <a href="https://www.google.com/maps/search/?api=1&query=Rockfish+Harajuku" target="_blank" rel="noopener">Rockfish</a></div><div>👚 <a href="http://xhslink.com/o/7fTeOG912Oo" target="_blank" rel="noopener">Gull 原宿店</a></div><div>🌻 <a href="http://xhslink.com/o/6gjtUPXd0TQ" target="_blank" rel="noopener">Nico and 日杂店</a>　·　🪙 <a href="https://www.google.com/maps/search/?api=1&query=3COINS+Harajuku" target="_blank" rel="noopener">3COINS（日杂店，Nico and 旁边）</a></div></div></div>
+          <div class="mall-card"><div class="mall-title">🍴 原宿小吃</div><div class="mall-content"><div>🌮 <a href="http://xhslink.com/o/2FESR7ptuqX" target="_blank" rel="noopener">Taco</a></div><div>🥞 <a href="http://xhslink.com/o/1DAQiIshnJZ" target="_blank" rel="noopener">可丽饼</a></div><div>🥘 <a href="http://xhslink.com/o/5wJFQuEOkp5" target="_blank" rel="noopener">大阪烧</a></div></div></div>
+        </div></section>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">03</span><div class="zone-name">🤍 表参道 Omotesando <span class="zone-sub">（可以不去）</span></div></div><div class="zone-body">
+          <div class="zone-item"><div class="zone-label">购物</div><div>👜 <a href="https://www.google.com/maps/search/?api=1&query=SouSou+Omotesando" target="_blank" rel="noopener">SouSou 红色数字帆布包</a>（最远，按路线安排）<br>🌿 <a href="https://www.google.com/maps/search/?api=1&query=Shiro+Omotesando" target="_blank" rel="noopener">Shiro</a>　🧘 <a href="https://www.google.com/maps/search/?api=1&query=Lululemon+Omotesando" target="_blank" rel="noopener">Lululemon</a></div></div>
+        </div></section>
         <section class="day3-finish">
           <div class="finish-heading"><span>🚄</span>离开东京 · 前往盛冈</div>
-          <div class="zone-item"><div class="zone-label">约 17:30</div><div>银座购物告一段落，预留时间回滨松町取行李</div></div>
-          <div class="zone-item"><div class="zone-label">18:00 前</div><div>从银座离开 → 滨松町取行李 → 前往东京站；建议预留充足换乘时间</div></div>
-          <div class="zone-item"><div class="zone-label">19:20</div><div>🚄 预约去盛冈 JR（按实际车票核对出发站与时间）</div></div>
-          <div class="zone-item"><div class="zone-label">约 21:40</div><div>抵达盛冈站，入住 Toyoko Inn Morioka Ekimae</div></div>
+          <div class="zone-item"><div class="zone-label">17:30</div><div>从表参道离开，前往滨松町酒店取行李（不是 17:30 到酒店）；请为回程交通预留时间。</div></div>
+          <div class="zone-item"><div class="zone-label">之后</div><div>取好行李后前往东京站；按实际车票核对乘车站、检票及进站时间。</div></div>
+          <div class="zone-item"><div class="zone-label">19:20</div><div>🚄 预约去盛冈 JR（按实际车票核对出发站与时间）。</div></div>
+          <div class="zone-item"><div class="zone-label">约 21:40</div><div>抵达盛冈站，入住 <a href="https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Morioka+Ekimae" target="_blank" rel="noopener">Toyoko Inn Morioka Ekimae</a>。</div></div>
         </section>
       </div>
     </div>`;
@@ -236,34 +276,35 @@ if(i===2){
 if(i===6){
   const day7 = `
     <div class="day-card">
-      <div class="meta">DAY 7 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🚄 青森 → 东京 · 东京塔 / 银座补购</div>
-      <div class="events">
-        <section class="day3-zone">
-          <div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🚄 青森 → 东京</div></div>
-          <div class="zone-body">
-            <div class="zone-item"><div class="zone-label">08:00–09:00</div><div>🛏️ 睡到自然醒、早餐</div></div>
-            <div class="zone-item"><div class="zone-label">上午</div><div>🧳 退房</div></div>
-            <div class="zone-item"><div class="zone-label">出发</div><div>🚄 青森 / 新青森 → 东京（原计划约 10:00–11:00 出发，建议按实际车次核对）</div></div>
-            <div class="zone-item"><div class="zone-label">抵达后</div><div>🏨 前往滨松町，入住 Meitetsu Inn Hamamatsucho；放好行李后再出门</div></div>
-          </div>
-        </section>
-        <div class="day3-transit"><div class="transit-label">🚶 交通</div><div class="transit-detail">滨松町酒店 → 东京塔，步行约 10–15 分钟（按酒店实际入口和路线导航）</div></div>
-        <section class="day3-zone">
-          <div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🗼 东京塔</div></div>
-          <div class="zone-body">
-            <div class="zone-item"><div class="zone-label">下午</div><div>从酒店附近步行前往，时间可按青森抵达东京后的实际情况灵活调整。</div></div>
-            <div class="zone-item"><div class="zone-label">攻略</div><div>🗼 <a href="http://xhslink.com/o/3gTw6BUSqwY" target="_blank" rel="noopener">东京塔二楼攻略</a><br>🐟 <a href="http://xhslink.com/o/NqUZoIzcps" target="_blank" rel="noopener">鲷鱼烧</a></div></div>
-          </div>
-        </section>
-        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">东京塔周边 → 银座，公共交通约 15–20 分钟，按当天出发站导航</div></div>
-        <section class="day3-zone">
-          <div class="zone-heading"><span class="zone-num">03</span><div class="zone-name">🛍️ 银座补充购物（可选）</div></div>
-          <div class="zone-body">
-            <div class="zone-item"><div class="zone-label">补购</div><div>回 Day 3 的银座清单查漏补缺，优先买当天没来得及买到的东西，不需要重复逛完所有百货。</div></div>
-            <div class="zone-item"><div class="zone-label">交通</div><div>逛完后返回滨松町酒店，步行或乘公共交通按当时路线选择。</div></div>
-          </div>
-        </section>
-        <section class="day3-finish"><div class="finish-heading"><span>🌙</span>回酒店休息</div><div class="zone-item"><div class="zone-label">夜间</div><div>🛏️ 回 Meitetsu Inn Hamamatsucho，整理行李，为次日早上 11:00 羽田起飞做准备</div></div></section>
+      <div class="meta">DAY 7 / 8</div><div class="date">${d[0]}</div><div class="week">${d[1]}</div><div class="title">🚄 青森 → 东京 · 秋叶原 · 银座 · 东京塔</div>
+      <div class="events day7-events">
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">01</span><div class="zone-name">🚄 青森 → 东京</div></div><div class="zone-body">
+          <div class="zone-item"><div class="zone-label">08:00–09:00</div><div>🛏️ 睡到自然醒、早餐</div></div>
+          <div class="zone-item"><div class="zone-label">上午</div><div>🧳 退房，前往新青森站</div></div>
+          <div class="zone-item"><div class="zone-label">出发</div><div>🚄 青森 / 新青森 → 东京（原计划约 10:00–11:00 出发，按实际车次核对）</div></div>
+          <div class="zone-item"><div class="zone-label">抵达后</div><div>🏨 前往滨松町的 <a href="https://www.google.com/maps/search/?api=1&query=Meitetsu+Inn+Hamamatsucho" target="_blank" rel="noopener">Meitetsu Inn Hamamatsucho</a> 放下行李，再出门游玩。</div></div>
+        </div></section>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">滨松町 → 秋叶原，JR 山手线约 10 分钟直达；以当天导航为准</div></div>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🎮 秋叶原</div></div><div class="zone-body">
+          <div class="zone-item"><div class="zone-label">购物</div><div>🎁 <a href="http://xhslink.com/o/5bDwpDF7hUt" target="_blank" rel="noopener">冰箱贴</a><br>💛 <a href="http://xhslink.com/o/2hzeaOyHo9A" target="_blank" rel="noopener">三色大楼</a><br>🏬 <a href="http://xhslink.com/o/8vfOzSgfOf5" target="_blank" rel="noopener">Bookoff</a><br>🏬 <a href="http://xhslink.com/o/5YZmP10vZze" target="_blank" rel="noopener">Bic Camera</a></div></div>
+          <div class="zone-item"><div class="zone-label">吃喝</div><div>🍰 <a href="http://xhslink.com/o/3rPVxuMHmDQ" target="_blank" rel="noopener">泡芙</a>　🥛 <a href="http://xhslink.com/o/26jeK6pdU6y" target="_blank" rel="noopener">牛奶</a>　🍚 <a href="http://xhslink.com/o/9RDDqDlsB5T" target="_blank" rel="noopener">牛肉饭</a></div></div>
+          <div class="zone-item"><div class="zone-label">神社</div><div>⛩️ <a href="http://xhslink.com/o/AgADxbqFmOp" target="_blank" rel="noopener">神田明神社</a></div></div>
+        </div></section>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">秋叶原 → 银座，东京 Metro 日比谷线约 10 分钟左右；以当天导航为准</div></div>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">03</span><div class="zone-name">🛍️ 银座</div></div><div class="zone-body">
+          <div class="zone-item"><div class="zone-label">Lumine</div><div>🏬 B1F <a href="http://xhslink.com/o/46FcPmz6dY1" target="_blank" rel="noopener">Aux Paradis 香水</a><br>🏬 1F <a href="http://xhslink.com/o/3el6xuN3LGX" target="_blank" rel="noopener">Cosme Kitchen / SINN PURETE 发油</a><br>🏬 1F Mucha 香水 / KAORU / ARTIDA OUD<br>🏬 2F Harbs　🏬 6F Plazza　🏬 7F Cosme　🏬 7F Natural Kitchen</div></div>
+          <div class="zone-item"><div class="zone-label"><a href="http://xhslink.com/o/1wwvBPES954" target="_blank" rel="noopener">OIOI 丸井百货</a></div><div>🏬 1F Sholayered<br>🏬 2F Randa / Chocolate / EVOL / Letalon<br>🏬 3–4F Jusglitty / Mystrada / Apuweiser / Rirandture / Moussy / swingle <span class="muted">（可不去）</span></div></div>
+          <div class="zone-item"><div class="zone-label">三越</div><div>🏬 B1F 95 折化妆品会员卡、<a href="http://xhslink.com/o/84Vzm3CGF7r" target="_blank" rel="noopener">Press Butter Sand</a>、<a href="http://xhslink.com/o/3rImPAljZ89" target="_blank" rel="noopener">NY Perfect Cheese</a>、e大饼、Shiro<br>🏬 1F 拉夫方巾 <span class="muted">（可删）</span></div></div>
+          <div class="zone-item"><div class="zone-label"><a href="http://xhslink.com/o/7KTyEQBOelE" target="_blank" rel="noopener">银座 SIX</a></div><div>10factory 橘子饼/果汁、Le Labo、Aesop、6F J-scent</div></div>
+          <div class="zone-item"><div class="zone-label">顺路买</div><div>🎁 北海道どさんこプラザ 有乐町店：札幌农学校饼干、北菓楼 开拓おかき<br>🏬 <a href="http://xhslink.com/o/8VsiOrm2lGW" target="_blank" rel="noopener">MUJI</a>：花生仁巧克力、睡衣、喷雾<br>🏬 <a href="http://xhslink.com/o/8QO8fsx2SIl" target="_blank" rel="noopener">银座东急</a><br>🏬 Itoya 伊东屋 13 层文具店（可以不去）<br>👔 <a href="http://xhslink.com/o/6jXePKn7Qs8" target="_blank" rel="noopener">优衣库</a></div></div>
+          <div class="zone-item"><div class="zone-label">吃饭</div><div>🍤 <a href="http://xhslink.com/o/oNe5tpFVdN" target="_blank" rel="noopener">和牛天妇罗</a>｜提前 10 天预约<br>🥪 <a href="http://xhslink.com/o/51hgLn3FjgV" target="_blank" rel="noopener">Ginza Sand</a>｜先点单，约等半小时后折返取</div></div>
+        </div></section>
+        <div class="day3-transit"><div class="transit-label">🚇 交通</div><div class="transit-detail">银座 → 东京塔周边，公共交通约 15–20 分钟；按当天出发站导航</div></div>
+        <section class="day3-zone"><div class="zone-heading"><span class="zone-num">04</span><div class="zone-name">🗼 东京塔（最后一站）</div></div><div class="zone-body">
+          <div class="zone-item"><div class="zone-label">傍晚</div><div>从银座前往东京塔，作为当天最后一个景点；具体时间按抵达东京及前面购物进度灵活调整。</div></div>
+          <div class="zone-item"><div class="zone-label">地名链接</div><div>🗼 <a href="http://xhslink.com/o/3gTw6BUSqwY" target="_blank" rel="noopener">东京塔二楼</a>　🐟 <a href="http://xhslink.com/o/NqUZoIzcps" target="_blank" rel="noopener">鲷鱼烧</a></div></div>
+        </div></section>
+        <section class="day3-finish"><div class="finish-heading"><span>🌙</span>回酒店休息</div><div class="zone-item"><div class="zone-label">夜间</div><div>🛏️ 返回 <a href="https://www.google.com/maps/search/?api=1&query=Meitetsu+Inn+Hamamatsucho" target="_blank" rel="noopener">Meitetsu Inn Hamamatsucho</a>，整理行李，为次日早上 11:00 羽田起飞做准备。</div></div></section>
       </div>
     </div>`;
   document.getElementById('day').innerHTML=day7;
@@ -272,4 +313,24 @@ if(i===6){
 let html='<div class="day-card"><div class="meta">DAY '+(i+1)+' / 8</div><div class="date">'+d[0]+'</div><div class="week">'+d[1]+'</div><div class="title">'+d[2]+'</div><div class="events">';let inPart=false;d[3].forEach(x=>{if(x==='__PLAN_A__'||x==='__PLAN_B__'){if(inPart)html+='</div></div>';inPart=true;html+='<div class="part"><div class="part-title">'+(x==='__PLAN_A__'?'PLAN A · 八甲田山（青森 → 八甲田山，可用 JR Pass）':'PLAN B · 冬季奥入濑溪流 + 十和田湖跟团游 <a href="https://xhslink.cn/o/8345RUahwGf" target="_blank" rel="noopener">↗</a>')+'</div><div class="event">';return}let p=x.split('｜');let time=p.length>1?p.shift():'';let detail=p.join('｜');html+='<div class="item"><div class="time">'+time+'</div><div class="detail">'+linkify(detail)+'</div></div>'});if(inPart)html+='</div></div>';else html+='</div>';html+='</div></div>';document.getElementById('day').innerHTML=html}show(0);
 const hotelList=document.getElementById('hotelList');H.forEach(h=>{hotelList.innerHTML+=`<div class="hotel"><div class="stay">${h[0]}</div><h3>${h[1]}</h3><div class="city">${h[2]}</div><div class="hotel-links"><a href="${h[3]}" target="_blank" rel="noopener">📍 Google Maps</a></div></div>`});
 const budgetList=document.getElementById('budgetList');B.forEach((b,i)=>{budgetList.innerHTML+=`<div class="budget-row ${i===B.length-1?'total':''}"><span>${b[0]}<br><span class="muted">${b[1]}</span></span><b>${b[2]}</b></div>`});
+
+const departureTarget = new Date('2027-02-01T17:25:00+08:00').getTime();
+function updateDepartureCountdown(){
+  const now=Date.now();
+  const diff=Math.abs(departureTarget-now);
+  const totalSeconds=Math.floor(diff/1000);
+  const days=Math.floor(totalSeconds/86400);
+  const hours=Math.floor((totalSeconds%86400)/3600);
+  const minutes=Math.floor((totalSeconds%3600)/60);
+  const seconds=totalSeconds%60;
+  const status=document.getElementById('countdownStatus');
+  if(!status) return;
+  status.textContent=now<departureTarget?'距离出发还有':'距离出发时间已经过了';
+  document.getElementById('cdDays').textContent=days;
+  document.getElementById('cdHours').textContent=String(hours).padStart(2,'0');
+  document.getElementById('cdMinutes').textContent=String(minutes).padStart(2,'0');
+  document.getElementById('cdSeconds').textContent=String(seconds).padStart(2,'0');
+}
+updateDepartureCountdown();
+setInterval(updateDepartureCountdown,1000);
 </script></body></html>
