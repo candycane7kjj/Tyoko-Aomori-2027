@@ -22,16 +22,18 @@ main{max-width:760px;margin:auto;padding:0 15px 45px}.hero{height:245px;margin:0
 .day-card .day3-transit{grid-template-columns:82px minmax(0,1fr);column-gap:10px;margin-left:0;margin-right:0}
 .day-card .zone-label{min-width:0;text-align:right}
 @media(max-width:520px){
-  .day-card .item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
-  .day-card .zone-item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
-  .day-card .day3-transit{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
+  .day-card .item{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .zone-item{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .day3-transit{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .time{white-space:nowrap;font-size:10px}
+  .day-card .zone-label{white-space:nowrap;font-size:10px}
 }
 /* Day 7: one continuous alignment grid across every section */
 .day7-events .zone-item{grid-template-columns:78px minmax(0,1fr);column-gap:12px}
 .day7-events .day3-transit{grid-template-columns:78px minmax(0,1fr);column-gap:12px;margin-left:0;margin-right:0}
 @media(max-width:520px){
-  .day7-events .zone-item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
-  .day7-events .day3-transit{grid-template-columns:64px minmax(0,1fr);column-gap:8px;margin-left:0;margin-right:0}
+  .day7-events .zone-item{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day7-events .day3-transit{grid-template-columns:90px minmax(0,1fr);column-gap:8px;margin-left:0;margin-right:0}
 }
 
 .mall-card{margin:10px 0;padding:10px 12px;background:#e3edf1;border:1px solid #d1e0e6;border-radius:11px}
@@ -87,9 +89,11 @@ footer{text-align:center;color:#9aa8ad;font-size:10px;padding:28px 0 8px}@media(
 .day-card .day3-transit{grid-template-columns:82px minmax(0,1fr);column-gap:10px;margin-left:0;margin-right:0}
 .day-card .zone-label{min-width:0;text-align:right}
 @media(max-width:520px){
-  .day-card .item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
-  .day-card .zone-item{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
-  .day-card .day3-transit{grid-template-columns:64px minmax(0,1fr);column-gap:8px}
+  .day-card .item{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .zone-item{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .day3-transit{grid-template-columns:90px minmax(0,1fr);column-gap:8px}
+  .day-card .time{white-space:nowrap;font-size:10px}
+  .day-card .zone-label{white-space:nowrap;font-size:10px}
 }
 </style></head><body>
 <header class="header"><div class="header-in"><div class="brand">Japan · 2027 ❄️</div><nav class="nav"><a href="#flights">航班</a><a href="#links">链接</a><a href="#itinerary">行程</a><a href="#hotels">酒店</a><a href="#budget">预算</a><a href="#todo">Todo</a></nav></div></header>
@@ -260,11 +264,11 @@ const B=[
 ["🎢 富士急乐园","约 ¥600","待填写"],
 ["💴 日元现金","待填写","待填写"]
 ];
-function linkify(s){let p=s.split('|');if(p.length>1)return p[0]+' <a href="'+p[1]+'" target="_blank" rel="noopener">↗</a>';return s}
+function linkify(s){let p=s.split('|');if(p.length>1)return '<a href="'+p[1]+'" target="_blank" rel="noopener">'+p[0]+'</a>'+p.slice(2).join('|');return s}
 const tabs=document.getElementById('daytabs');D.forEach((d,i)=>{let b=document.createElement('button');b.className='daytab';b.textContent='D'+(i+1)+' · '+d[0];b.onclick=()=>show(i);tabs.appendChild(b)});
 function show(i){document.querySelectorAll('.daytab').forEach((b,j)=>{b.classList.toggle('active',i===j);if(i===j)b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})});const d=D[i];
 if(i===2){
-  const ginza = `<section class="day3-zone"><div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🛍️ 银座</div></div><div class="zone-body">\n          <div class="zone-item"><div class="zone-label">10:40</div><div>到东京银座根室花丸排队吃寿司，建议先排队，实际入店时间以等位情况为准。<a href="https://xhslink.cn/o/36a2eGpBf44" target="_blank" rel="noopener">寿司攻略 ↗</a></div></div>
+  const ginza = `<section class="day3-zone"><div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🛍️ 银座</div></div><div class="zone-body">\n          <div class="zone-item"><div class="zone-label">10:40</div><div><a href="https://xhslink.cn/o/36a2eGpBf44" target="_blank" rel="noopener">到东京银座根室花丸排队吃寿司</a>，建议先排队，实际入店时间以等位情况为准。</div></div>
           <div class="zone-item"><div class="zone-label">Lumine</div><div>🏬 B1F <a href="http://xhslink.com/o/46FcPmz6dY1" target="_blank" rel="noopener">Aux Paradis 香水</a><br>🏬 1F <a href="http://xhslink.com/o/3el6xuN3LGX" target="_blank" rel="noopener">Cosme Kitchen / SINN PURETE 发油</a><br>🏬 1F Mucha 香水 / KAORU / ARTIDA OUD<br>🏬 2F Harbs　🏬 6F Plazza　🏬 7F Cosme　🏬 7F Natural Kitchen</div></div>
           <div class="zone-item"><div class="zone-label"><a href="http://xhslink.com/o/1wwvBPES954" target="_blank" rel="noopener">OIOI 丸井百货</a></div><div>🏬 1F Sholayered<br>🏬 2F Randa / Chocolate / EVOL / Letalon<br>🏬 3–4F Jusglitty / Mystrada / Apuweiser / Rirandture / Moussy / swingle <span class="muted">（可不去）</span></div></div>
           <div class="zone-item"><div class="zone-label">三越</div><div>🏬 B1F 95 折化妆品会员卡、<a href="http://xhslink.com/o/84Vzm3CGF7r" target="_blank" rel="noopener">Press Butter Sand</a>、<a href="http://xhslink.com/o/3rImPAljZ89" target="_blank" rel="noopener">NY Perfect Cheese</a>、e大饼、Shiro<br>🏬 1F 拉夫方巾 <span class="muted">（可删）</span></div></div>
