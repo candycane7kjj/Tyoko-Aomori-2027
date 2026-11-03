@@ -293,8 +293,8 @@ const D=[
 "第二站｜🌲 奥入濑溪流｜约 2 小时 · 自助导览 · 免费入场",
 "第三站｜🏞️ 十和田湖｜约 2 小时 · 自助导览 · 免费入场",
 "18:00｜📍 返回青森駅西口駅前広場，下车",
-"一日团结束后可考虑｜☕ Coffee Marron（关门很早；如果一日团提前结束、赶得上营业时间，建议优先去）|https://www.google.com/maps/search/?api=1&query=Coffee+Marron+Aomori",
-"一日团结束后可考虑｜⛩️ 善知鳥神社（如果还有体力和时间）|https://www.google.com/maps/search/?api=1&query=善知鳥神社+青森",
+"可考虑｜☕ Coffee Marron（关门很早；如果一日团提前结束、赶得上营业时间，建议优先去）|https://www.google.com/maps/search/?api=1&query=Coffee+Marron+Aomori",
+"可考虑｜⛩️ 善知鳥神社（如果还有体力和时间）|https://www.google.com/maps/search/?api=1&query=善知鳥神社+青森",
 "__PLAN_B__",
 "上午｜❄️ 八甲田山 / 八甲田缆车",
 "中午｜🍜 山上 / 附近午饭",
@@ -338,23 +338,25 @@ const H=[
 ["2.7–2.8","Meitetsu Inn Hamamatsucho","东京 · 滨松町","https://www.google.com/maps/search/?api=1&query=Meitetsu+Inn+Hamamatsucho"]
 ];
 const B=[
-["✈️ 机票","预计 ¥5,000","实际 ¥4,586"],
-["🏨 东京 2 晚","预计 ¥22,376 日元","实际 ¥980"],
-["🏨 盛冈 1 晚","未填写","实际 ¥310"],
-["🏨 青森 3 晚","未填写","实际 ¥1,170"],
-["🏨 东京 1 晚","预计 ¥10,921 日元","实际 ¥480"],
-["🚇 交通","约 ¥1,300","待填写"],
-["🍜 餐饮","¥3,000","待填写"],
-["🎠 迪士尼门票","¥1,000","待填写"],
-["🎢 富士急乐园","约 ¥600","待填写"],
-["💴 日元现金","待填写","待填写"]
+["✈️ 机票","预计 5,000元","实际 4,586元"],
+["🏨 东京 2 晚","预计 22,376日元","实际 980元"],
+["🏨 盛冈 1 晚","预计 —","实际 310元"],
+["🏨 青森 3 晚","预计 —","实际 1,170元"],
+["🏨 东京 1 晚","预计 10,921日元","实际 480元"],
+["🚇 交通","预计 —","实际 1,000元"],
+["🚄 东日本 JR","预计 3,000元","实际 7万日元（两张）"],
+["🍜 餐饮","预计 —","实际 5,000元"],
+["🎠 迪士尼门票","预计 —","实际 1,000元"],
+["🚌 青森一日团","预计 —","实际 1,700元"],
+["💴 日元现金","预计 —","实际 3,000元（7万日元）"],
+["合计","","实际 22,226元"]
 ];
 function linkify(s){let p=s.split('|');if(p.length>1)return '<a href="'+p[1]+'" target="_blank" rel="noopener">'+p[0]+'</a>'+p.slice(2).join('|');return s}
 const tabs=document.getElementById('daytabs');D.forEach((d,i)=>{let b=document.createElement('button');b.className='daytab';b.textContent='D'+(i+1)+' · '+d[0];b.onclick=()=>show(i);tabs.appendChild(b)});
 function show(i){document.querySelectorAll('.daytab').forEach((b,j)=>{b.classList.toggle('active',i===j);if(i===j)b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})});const d=D[i];
 if(i===2){
   const ginza = `<section class="day3-zone"><div class="zone-heading"><span class="zone-num">02</span><div class="zone-name">🛍️ 银座</div></div><div class="zone-body">\n          <div class="shopping-reminder">🧤 购物提醒：买雪地靴、羽绒服和保暖衣</div>
-          <div class="zone-item"><div class="zone-label">午餐</div><div>🍲 <a href="https://www.google.com/maps/search/?api=1&amp;query=SAPPORO+大助+银座" target="_blank" rel="noopener">银座 SAPPORO 大助</a>｜午餐改到这里，不吃寿司啦。</div></div>
+          <div class="zone-item"><div class="zone-label">午餐</div><div>🍲 <a href="https://www.google.com/maps/search/?api=1&amp;query=SAPPORO+大助+银座" target="_blank" rel="noopener">银座 SAPPORO 大助</a></div></div>
           <div class="zone-item"><div class="zone-label">Lumine</div><div>🏬 B1F <a href="http://xhslink.com/o/46FcPmz6dY1" target="_blank" rel="noopener">Aux Paradis 香水</a><br>🏬 1F <a href="http://xhslink.com/o/3el6xuN3LGX" target="_blank" rel="noopener">Cosme Kitchen / SINN PURETE 发油</a><br>🏬 1F Mucha 香水 / KAORU / ARTIDA OUD<br>🏬 2F Harbs　🏬 6F Plazza　🏬 7F Cosme　🏬 7F Natural Kitchen</div></div>
           <div class="zone-item"><div class="zone-label"><a href="http://xhslink.com/o/1wwvBPES954" target="_blank" rel="noopener">OIOI 丸井百货</a></div><div>🏬 1F Sholayered<br>🏬 2F Randa / Chocolate / EVOL / Letalon<br>🏬 3–4F Jusglitty / Mystrada / Apuweiser / Rirandture / Moussy / swingle <span class="muted">（可不去）</span></div></div>
           <div class="zone-item"><div class="zone-label">三越</div><div>🏬 B1F 95 折化妆品会员卡、<a href="http://xhslink.com/o/84Vzm3CGF7r" target="_blank" rel="noopener">Press Butter Sand</a>、<a href="http://xhslink.com/o/3rImPAljZ89" target="_blank" rel="noopener">NY Perfect Cheese</a>、e大饼、Shiro<br>🏬 1F 拉夫方巾 <span class="muted">（可删）</span></div></div>
@@ -376,8 +378,7 @@ if(i===2){
         <section class="day3-finish">
           <div class="finish-heading"><span>🚄</span>离开东京 · 前往盛冈</div>
           <div class="zone-item"><div class="zone-label">18:00</div><div>⚠️ 离开银座 → 滨松町取行李。</div></div>
-          <div class="zone-item"><div class="zone-label">东京站</div><div>🥪 可以买东京站的水果三明治，作为新干线上的小点心：<a href="https://xhslink.cn/o/F9JvzJTZBW" target="_blank" rel="noopener">水果三明治攻略</a>。</div></div>
-          <div class="zone-item"><div class="zone-label">之后</div><div>取好行李后前往东京站；按实际车票核对乘车站、检票及进站时间。</div></div>
+          <div class="zone-item"><div class="zone-label">之后</div><div>取好行李后前往东京站；按实际车票核对乘车站、检票及进站时间。可以买东京站的水果三明治，作为新干线上的小点心：<a href="https://xhslink.cn/o/F9JvzJTZBW" target="_blank" rel="noopener">水果三明治攻略</a>。</div></div>
           <div class="zone-item"><div class="zone-label">19:20</div><div>🚄 预约去盛冈 JR（按实际车票核对出发站与时间）。</div></div>
           <div class="zone-item"><div class="zone-label">约 21:40</div><div>抵达盛冈站，入住 <a href="https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Morioka+Ekimae" target="_blank" rel="noopener">Toyoko Inn Morioka Ekimae</a>。</div></div>
           <div class="zone-item"><div class="zone-label">入住后</div><div>🍜 去酒店附近吃一碗盛冈冷面，作为抵达盛冈后的晚餐。</div></div>
